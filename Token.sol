@@ -26,6 +26,7 @@ contract Token {
         decimals = _decimals;
         totalSupply = _totalSupply; 
         balanceOf[msg.sender] = totalSupply;
+        emit Transfer(address(0), msg.sender, totalSupply);
     }
 
     /// @notice transfer amount of tokens to an address
